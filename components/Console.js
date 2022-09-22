@@ -133,11 +133,9 @@ const Console = ({ showConsole }) => {
   // console.log(` show :${pickroom}: > `, show);
   // console.log(` tag :${pickroom}: > `, tag[pickroom]);
   const viewShotRef = useRef();
-  const QRref = useRef();
   const nameRef = useRef();
 
   const [receipt, setReceipt] = useState('')
-  const [QRcode, setQRcode] = useState('')
   const [name, setName] = useState('')
 
   const [haveData, setHaveData] = useState(false)
@@ -157,9 +155,9 @@ const Console = ({ showConsole }) => {
           await BluetoothEscposPrinter.printText(
             '________________________________',
             {},
-          ); 
+          );
           // await BluetoothEscposPrinter.printPic(QRcode, { width: 300, left: 40 });
-          await BluetoothEscposPrinter.printPic(name, { width: 380, });
+          await BluetoothEscposPrinter.printPic(name, { width: 370, });
           await BluetoothEscposPrinter.printText('\r\n\r\n', {});
         }, 500)
 
@@ -234,8 +232,7 @@ const Console = ({ showConsole }) => {
       <Receipt show={show} setModalVisible={setModalVisible}
         modalVisible={modalVisible} tag={tag} pickroom={pickroom}
         flavor={flavor} viewShotRef={viewShotRef} setHaveData={setHaveData}
-        currentList={currentList} setReceipt={setReceipt} QRref={QRref}
-        setQRcode={setQRcode} nameRef={nameRef}
+        currentList={currentList} setReceipt={setReceipt} nameRef={nameRef}
         setName={setName} />
 
       {/* LEFT  */}
@@ -356,13 +353,13 @@ const text = StyleSheet.create({
   cal: {
     color: 'white',
     fontFamily: 'Kanit-Medium',
-    fontSize: 20,
-    paddingTop: 5
+    fontSize: 18,
   },
   print: {
     color: 'white',
     fontFamily: 'Kanit-Medium',
-    fontSize: 26,
+    fontSize: 25,
+    marginTop: -5
 
   },
   space: {
@@ -375,11 +372,11 @@ const text = StyleSheet.create({
 
 const io = StyleSheet.create({
   input: {
-    height: 40,
+    height: 65,
     margin: 8,
     padding: 10,
     borderWidth: 2,
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
     borderColor: 'white'
   },

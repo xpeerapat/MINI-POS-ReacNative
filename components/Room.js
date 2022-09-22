@@ -33,7 +33,7 @@ const Room = ({ pick, setPick, setReset }) => {
             <TouchableOpacity style={style.space}
                 onPress={() => restart()}>
                 <Image source={require('./Capture.jpg')}
-                    style={{ width: 90, height: 80, borderRadius: 50, borderWidth: 3, borderColor: 'white' }} />
+                    style={{ width: 70, height: 60, borderRadius: 50, borderWidth: 3, borderColor: 'white' }} />
             </TouchableOpacity>
 
             <TouchableOpacity style={style.Box}
@@ -79,10 +79,7 @@ const style = StyleSheet.create({
         fontFamily: 'Kanit-Medium',
         borderRadius: 5,
 
-
-
     },
-
     texted: {
         flex: 1,
         height: '85%',
@@ -94,15 +91,13 @@ const style = StyleSheet.create({
         borderColor: '#5b4b49',
         backgroundColor: '#ff3c38',
         borderRadius: 5,
-
     },
-
     space: {
         flex: 0.7,
-        margin: 10,
+        margin: 8,
         color: 'black',
         borderRadius: 100,
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
         borderColor: '#5b4b49',
 
     },

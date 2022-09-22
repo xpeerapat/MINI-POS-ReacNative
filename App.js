@@ -15,8 +15,6 @@ import {
 } from 'react-native';
 import { BluetoothManager } from 'react-native-bluetooth-escpos-printer';
 import ItemList from './ItemList';
-import SamplePrint from './SamplePrint';
-import ViewShot from 'react-native-view-shot';
 import Console from './components/Console';
 
 const App = () => {
@@ -248,16 +246,8 @@ const App = () => {
                 color="#00BCD4"
               />
             );
-          })}
+          })} 
         </View>
-
-        {/* text input */}
-        {/* <ViewShot ref={ref} style={order.main}
-          options={{ fileName: "a", format: "jpg", quality: 1, result: 'base64' }}>
-          <Text style={order.font}>
-            547
-          </Text>
-        </ViewShot> */}
 
         <Button
           title="Go to MENU"
@@ -266,10 +256,7 @@ const App = () => {
             setShowConsole(true)
           }}
         />
-
-
-        {/* <SamplePrint order={ref} /> */}
-
+ 
         <View style={{ height: 100 }} />
       </View>
       <Console showConsole={showConsole} />

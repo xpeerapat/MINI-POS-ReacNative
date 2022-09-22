@@ -164,7 +164,7 @@ const modals = StyleSheet.create({
         position: 'absolute',
         left: '16%',
         top: '30%',
-        height: '40%',
+        height: 'auto',
         width: '70%',
         // backgroundColor: 'white', 
     },
@@ -184,14 +184,16 @@ const modals = StyleSheet.create({
     },
     modalBottom: {
         flex: 5,
-        paddingTop: 80,
+        paddingTop: 20,
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#93c48b',
         borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20
+        borderBottomRightRadius: 20,
+        
+        paddingBottom:25
     },
     button: {
         backgroundColor: 'whtie',

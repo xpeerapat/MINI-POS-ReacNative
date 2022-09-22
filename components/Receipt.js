@@ -4,16 +4,14 @@ import ViewShot from 'react-native-view-shot';
 
 const Receipt = (
     { show, tag, flavor, pickroom, viewShotRef, setHaveData, currentList,
-        setReceipt, QRref, setQRcode, nameRef, setName }) => {
+        setReceipt, nameRef, setName }) => {
 
     const [sum, setSum] = useState()
 
     async function captureViewShot() {
-        const aa = await viewShotRef.current.capture()
-        const bb = await QRref.current.capture()
+        const aa = await viewShotRef.current.capture() 
         const dd = await nameRef.current.capture()
-        setReceipt(aa)
-        setQRcode(bb)
+        setReceipt(aa) 
         setName(dd) 
     }
 
@@ -95,19 +93,7 @@ const Receipt = (
                             </View>
                         </ViewShot>
 
-                    </ScrollView>
-                    <ViewShot ref={QRref} style={{ backgroundColor: 'white', width: '60%', height: '40%' }}
-                        options={{
-                            fileName: "receipt",
-                            format: "jpg",
-                            quality: 1,
-                            result: 'base64'
-                        }} >
-                        <Image
-                            style={{ width: '100%', height: '100%' }}
-                            source={{ uri: `https://promptpay.io/0992136402.png` }}
-                        />
-                    </ViewShot>
+                    </ScrollView> 
                 </View>
 
                 {/* pp */}

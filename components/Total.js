@@ -113,7 +113,7 @@ const Total = ({ setModalVisible, modalVisible, show, tag, flavor, pickroom }) =
 
 const styles = StyleSheet.create({
     total: {
-        marginTop: -75,
+        marginTop: -60,
         marginBottom: 40,
         color: 'white',
         fontSize: 25,
